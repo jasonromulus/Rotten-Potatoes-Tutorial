@@ -95,3 +95,7 @@ app.delete('/reviews/:id', function (req, res) {
 app.listen(3000, () => {
   console.log('App listening on port 3000!')
 });
+
+//const reviews = require('./reviews');
+
+module.exports = app;
