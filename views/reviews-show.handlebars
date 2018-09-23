@@ -5,7 +5,7 @@
 <p>{{review.description}}</p>
 <p><a href="/reviews/{{review._id}}/edit">Edit</a></p> -->
 
-<a href="/">Back to Home</a>
+<!-- <a href="/">Back to Home</a>
 <div class="row">
   <div class="col-sm-6 col-sm-offset-3">
     <h1>{{review.title}}</h1>
@@ -15,6 +15,28 @@
     <p><form method="POST" action="/reviews/{{review._id}}?_method=DELETE">
         <button class="btn btn-primary" type="submit">Delete</button>
     </form></p>
+
+    <hr>
+
+    <!-- Comment form -->
+    <!-- {{> comment-form}}
+
+  </div>
+</div> --> -->
+
+<a href="/">Back to Home</a>
+
+    ...
+
+    {{> comment-form}}
+
+    <hr>
+
+    <!-- Show Comments -->
+    {{#each comments}}
+      {{> comment}}
+    {{/each}}
+
   </div>
 </div>
 

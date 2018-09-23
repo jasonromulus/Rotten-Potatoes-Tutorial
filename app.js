@@ -4,12 +4,13 @@ const app = express()
 const mongoose = require('mongoose');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
-
-const Review = mongoose.model('Review', {
-  title: String,
-  description: String,
-  movieTitle: String
-});
+const Comment = require('./models/comment')
+// const Review = mongoose.model('Review', {
+//   title: String,
+//   description: String,
+//   movieTitle: String
+// });
+const Review = require('./models/review')
 
 // override with POST having ?_method=DELETE or ?_method=PUT
 app.use(methodOverride('_method'))
@@ -96,6 +97,9 @@ app.listen(3000, () => {
   console.log('App listening on port 3000!')
 });
 
-//const reviews = require('./reviews');
+// const reviews = require('./reviews');
 
 module.exports = app;
+
+// var mongoose = require('mongoose');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/rotten-potatoes');

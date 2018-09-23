@@ -1,5 +1,8 @@
-<form>
+<form action="/reviews/comments" method="post">
+  <input type="hidden" value="{{review._id}}" name="reviewId">
   <fieldset>
+    <!-- <form>
+  <fieldset> -->
     <legend>Add a Comment</legend>
     <!-- TITLE -->
     <div class="form-group">
